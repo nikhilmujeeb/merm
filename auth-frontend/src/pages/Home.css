@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #444;
+    --secondary-color: #f0f0f0;
+    --text-color: #fff;
+    --button-hover: #9b59b6;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+  }
+  
+  .hero-section {
+    background-color: var(--secondary-color);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .hero-heading {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .hero-subtext {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #9b59b6;
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+  }
+  
+  /* Keyframes for fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-heading {
+      font-size: 2rem;
+    }
+    .cta-button {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+  }
+  
